@@ -1,0 +1,54 @@
+{
+  "name": "@ciguru/sfdx-ts-adapter",
+  "version": "1.0.0",
+  "description": "Provide TS interfaces to the SFDX CLI as functions instead of executing commands on the command line",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prepare": "husky install",
+    "format": "prettier --write source",
+    "build": "tsc",
+    "build:check": "tsc --noEmit",
+    "start": "env-cmd ts-node source/index.ts",
+    "lint": "eslint source",
+    "lint:fix": "eslint source --fix",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ciguru/sfdx-ts-adapter"
+  },
+  "author": "Customertimes Software",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/ciguru/sfdx-ts-adapter/issues"
+  },
+  "homepage": "https://github.com/ciguru/sfdx-ts-adapter#readme",
+  "devDependencies": {
+    "@types/jest": "27.4.1",
+    "@typescript-eslint/eslint-plugin": "5.15.0",
+    "@typescript-eslint/parser": "5.15.0",
+    "@vercel/ncc": "0.33.3",
+    "env-cmd": "10.1.0",
+    "eslint": "8.11.0",
+    "husky": "7.0.4",
+    "jest": "27.5.1",
+    "lint-staged": "12.3.5",
+    "prettier": "2.5.1",
+    "ts-jest": "27.1.3",
+    "ts-node": "10.7.0",
+    "typescript": "4.6.2"
+  },
+  "dependencies": {
+    "@salesforce/command": "5.0.0",
+    "@salesforce/core": "2.35.3",
+    "@salesforce/plugin-apex": "0.11.0",
+    "@salesforce/plugin-auth": "1.8.1",
+    "@salesforce/plugin-data": "0.6.9",
+    "@salesforce/plugin-org": "1.11.2",
+    "@salesforce/plugin-source": "1.8.18",
+    "salesforce-alm": "54.0.1"
+  }
+}
