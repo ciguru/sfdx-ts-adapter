@@ -42,7 +42,7 @@
     "typescript": "4.6.2"
   },
   "dependencies": {
-    "@salesforce/command": "5.0.0",
+    "@salesforce/command": "5.0.3",
     "@salesforce/core": "2.35.3",
     "@salesforce/plugin-apex": "0.11.0",
     "@salesforce/plugin-auth": "1.8.1",
