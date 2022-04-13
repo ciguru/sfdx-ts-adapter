@@ -21,6 +21,7 @@ import ForceOrgDelete from './force/org/delete';
 import ForceOrgDisplay from './force/org/display';
 import ForcePackageInstall from './force/package/install';
 import ForceSourcePush from './force/source/push';
+import ForceSourceConvert from './force/source/convert';
 
 export default interface SfdxCommands {
   auth: {
@@ -65,6 +66,7 @@ export default interface SfdxCommands {
     };
     source: {
       push: typeof ForceSourcePush;
+      convert: typeof ForceSourceConvert;
     };
   };
 }
