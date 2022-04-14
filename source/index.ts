@@ -22,6 +22,7 @@ import ForceOrgDelete from './force/org/delete';
 import ForceOrgDisplay from './force/org/display';
 import ForcePackageInstall from './force/package/install';
 import ForceSourcePush from './force/source/push';
+import ForceSourceConvert from './force/source/convert';
 
 // Import other modules
 import SfdxCommands from './index.interface';
@@ -119,6 +120,7 @@ const sfdx: SfdxCommands = {
     source: {
       push: async (targetUserName: string, isForceOverwrite?: boolean) =>
         ForceSourcePush(targetUserName, isForceOverwrite),
+      convert: async (outputDir: string, sourcePath?: string[]) => await ForceSourceConvert(outputDir, sourcePath),
     },
   },
 };

@@ -12,6 +12,7 @@ The plugins used for the released adapter version are the same as in the mention
 
 <table>
 <tr><td><b>Adapter version</b></td><td><b>SFDX CLI version</b></td></tr>
+<tr><td>v1.1.0</td><td>v7.142.1</td></tr>
 <tr><td>v1.0.0</td><td>v7.142.1</td></tr>
 </table>
 
@@ -377,6 +378,28 @@ await SFDX.force.package.install(targetUserName, packageId);
 <tr><td><b>Parameter</b></td><td><b>Required</b></td><td><b>SFDX Command attribute</b></td><td><b>Comment</b></td></tr>
 <tr><td>targetUserName</td><td>true</td><td>--targetusername</td><td></td></tr>
 <tr><td>packageId</td><td>true</td><td>--package</td><td></td></tr>
+</table>
+
+#### Output Data
+
+ToBe Described
+
+---
+
+### `> sfdx force:source:convert` (since v1.1.0)
+
+#### Call function
+
+```ts
+await SFDX.force.source.convert(outputDir, sourcePath);
+```
+
+#### Parameters
+
+<table>
+<tr><td><b>Parameter</b></td><td><b>Required</b></td><td><b>SFDX Command attribute</b></td><td><b>Comment</b></td></tr>
+<tr><td>outputDir</td><td>true</td><td>--outputdir</td><td>Output directory to store the Metadata API–formatted files in</td></tr>
+<tr><td>sourcePath</td><td>false</td><td>--sourcepath</td><td>Array of paths to the local source files to convert</td></tr>
 </table>
 
 #### Output Data
