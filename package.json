@@ -49,6 +49,6 @@
     "@salesforce/plugin-data": "0.6.9",
     "@salesforce/plugin-org": "1.11.2",
     "@salesforce/plugin-source": "1.8.18",
-    "salesforce-alm": "54.0.1"
+    "salesforce-alm": "54.2.0"
   }
 }
