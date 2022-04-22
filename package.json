@@ -1,6 +1,6 @@
 {
   "name": "@ciguru/sfdx-ts-adapter",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Provide TS interfaces to the SFDX CLI as functions instead of executing commands on the command line",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -42,13 +42,13 @@
     "typescript": "4.6.3"
   },
   "dependencies": {
-    "@salesforce/command": "5.0.0",
-    "@salesforce/core": "2.35.3",
+    "@salesforce/command": "5.0.5",
+    "@salesforce/core": "2.36.3",
     "@salesforce/plugin-apex": "0.11.0",
-    "@salesforce/plugin-auth": "1.8.1",
-    "@salesforce/plugin-data": "0.6.9",
+    "@salesforce/plugin-auth": "2.0.1",
+    "@salesforce/plugin-data": "0.6.13",
     "@salesforce/plugin-org": "1.11.2",
-    "@salesforce/plugin-source": "1.8.18",
-    "salesforce-alm": "54.0.1"
+    "@salesforce/plugin-source": "1.9.3",
+    "salesforce-alm": "54.2.0"
   }
 }
