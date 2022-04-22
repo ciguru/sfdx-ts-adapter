@@ -12,6 +12,7 @@ The plugins used for the released adapter version are the same as in the mention
 
 <table>
 <tr><td><b>Adapter version</b></td><td><b>SFDX CLI version</b></td></tr>
+<tr><td>v1.2.0</td><td>v7.147.1</td></tr>
 <tr><td>v1.1.0</td><td>v7.142.1</td></tr>
 <tr><td>v1.0.0</td><td>v7.142.1</td></tr>
 </table>

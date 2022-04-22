@@ -5,7 +5,7 @@
  *  For full license text, see LICENSE.txt file in the repo root or https://opensource.org/licenses/BSD-3-Clause
  */
 
-import Push from '@salesforce/plugin-source/lib/commands/force/source/beta/push';
+import Push from '@salesforce/plugin-source/lib/commands/force/source/push';
 import { PushResponse } from '@salesforce/plugin-source/lib/formatters/source/pushResultFormatter';
 import { NoRequiredAttribute } from '../../errors';
 
