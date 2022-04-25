@@ -89,8 +89,8 @@ const sfdx: SfdxCommands = {
         import: async (targetUserName: string, planFile: string) => await ForceDataTreeImport(targetUserName, planFile),
       },
       soql: {
-        queryCsv: async (targetUserName: string, csvFile: string, query: string) =>
-          await ForceDataSoql.queryCsv(targetUserName, csvFile, query),
+        queryCsv: async (targetUserName: string, csvFile: string, query: string, replaceCsvHeader?: string) =>
+          await ForceDataSoql.queryCsv(targetUserName, csvFile, query, replaceCsvHeader),
       },
     },
     mdApi: {
