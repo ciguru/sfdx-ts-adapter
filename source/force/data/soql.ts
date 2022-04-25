@@ -5,7 +5,7 @@
  *  For full license text, see LICENSE.txt file in the repo root or https://opensource.org/licenses/BSD-3-Clause
  */
 
-import { appendFileSync, cpSync, rmSync } from 'fs';
+import { appendFileSync, writeFileSync, cpSync, existsSync, rmSync } from 'fs';
 import { join } from 'path';
 import { EOL } from 'os';
 import { DataSoqlQueryCommand } from '@salesforce/plugin-data/lib/commands/force/data/soql/query';
@@ -32,7 +32,12 @@ function getCsvArgs(targetUserName: string, query: string): string[] {
   return args;
 }
 
-export async function queryCsv(targetUserName: string, csvFile: string, query: string): Promise<Output> {
+export async function queryCsv(
+  targetUserName: string,
+  csvFile: string,
+  query: string,
+  replaceCsvHeader?: string,
+): Promise<Output> {
   // Forward UX logs (CSV file) to file
   const logger = new Logger('UI');
   const tmpCsvFileName = join(process.cwd(), `data_${Date.now()}.csv`);
@@ -44,7 +49,21 @@ export async function queryCsv(targetUserName: string, csvFile: string, query: s
       return this;
     }
     log(...args: string[]): UX {
-      args.forEach((str) => appendFileSync(tmpCsvFileName, `${str}${EOL}`, { encoding: 'utf-8' }));
+      args.forEach((str) => {
+        if (existsSync(tmpCsvFileName)) {
+          // append CSV data
+          appendFileSync(tmpCsvFileName, `${str}${EOL}`, { encoding: 'utf-8' });
+        } else {
+          // It's header
+          if (replaceCsvHeader) {
+            // Replace header
+            writeFileSync(tmpCsvFileName, `${replaceCsvHeader}${EOL}`, { encoding: 'utf-8' });
+          } else {
+            // Leave header
+            writeFileSync(tmpCsvFileName, `${str}${EOL}`, { encoding: 'utf-8' });
+          }
+        }
+      });
       return this;
     }
   }

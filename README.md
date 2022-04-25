@@ -260,7 +260,7 @@ ToBe Described
 #### Call function
 
 ```ts
-await SFDX.force.data.soql.queryCsv(targetUserName, csvFile, query);
+await SFDX.force.data.soql.queryCsv(targetUserName, csvFile, query, replaceCsvHeader);
 ```
 
 #### Parameters
@@ -270,6 +270,7 @@ await SFDX.force.data.soql.queryCsv(targetUserName, csvFile, query);
 <tr><td>targetUserName</td><td>true</td><td>--targetusername</td><td>Username or alias for the target org.</td></tr>
 <tr><td>csvFile</td><td>true</td><td>N/A</td><td>CSV file name to save output data</td></tr>
 <tr><td>query</td><td>true</td><td>--query</td><td>SOQL query to execute</td></tr>
+<tr><td>replaceCsvHeader</td><td>false</td><td>N/A</td><td>(Optional) The string value will be used to replace the CSV header row</td></tr>
 </table>
 
 #### Output Data
