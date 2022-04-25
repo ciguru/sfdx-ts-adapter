@@ -11,6 +11,7 @@ import AuthList from './auth/list';
 import AuthLogout from './auth/logout';
 import ForceApexExecute from './force/apex/execute';
 import ForceApexTest from './force/apex/test/run';
+import ForceDataBulkDelete from './force/data/bulk/delete';
 import ForceDataBulkUpsert from './force/data/bulk/upsert';
 import ForceDataTreeImport from './force/data/tree/import';
 import * as ForceDataSoql from './force/data/soql';
@@ -44,6 +45,7 @@ export default interface SfdxCommands {
     };
     data: {
       bulk: {
+        delete: typeof ForceDataBulkDelete;
         upsert: typeof ForceDataBulkUpsert;
       };
       tree: {
