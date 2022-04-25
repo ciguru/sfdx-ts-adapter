@@ -14,6 +14,7 @@ import ForceApexExecute from './force/apex/execute';
 import ForceApexTest, { TestLevel as ApexTestLevel } from './force/apex/test/run';
 import ForceDataBulkUpsert from './force/data/bulk/upsert';
 import ForceDataTreeImport from './force/data/tree/import';
+import * as ForceDataSoql from './force/data/soql';
 import ForceMdApiDeploy, { TestLevel as DeployTestLevel } from './force/mdapi/deploy';
 import ForceMdApiDeployReport from './force/mdapi/deploy/report';
 import ForceMdApiRetrieve from './force/mdapi/retrieve';
@@ -71,6 +72,10 @@ const sfdx: SfdxCommands = {
       },
       tree: {
         import: async (targetUserName: string, planFile: string) => await ForceDataTreeImport(targetUserName, planFile),
+      },
+      soql: {
+        queryCsv: async (targetUserName: string, csvFile: string, query: string) =>
+          await ForceDataSoql.queryCsv(targetUserName, csvFile, query),
       },
     },
     mdApi: {
