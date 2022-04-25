@@ -12,6 +12,7 @@ import AuthList from './auth/list';
 import AuthLogout from './auth/logout';
 import ForceApexExecute from './force/apex/execute';
 import ForceApexTest, { TestLevel as ApexTestLevel } from './force/apex/test/run';
+import ForceDataBulkDelete from './force/data/bulk/delete';
 import ForceDataBulkUpsert from './force/data/bulk/upsert';
 import ForceDataTreeImport from './force/data/tree/import';
 import * as ForceDataSoql from './force/data/soql';
@@ -53,6 +54,20 @@ const sfdx: SfdxCommands = {
     },
     data: {
       bulk: {
+        delete: async (
+          targetUserName: string,
+          csvFile: string,
+          sObjectType: string,
+          allowNoMoreFailedBatches?: number,
+          allowNoMoreFailedRecords?: number,
+        ) =>
+          await ForceDataBulkDelete(
+            targetUserName,
+            csvFile,
+            sObjectType,
+            allowNoMoreFailedBatches,
+            allowNoMoreFailedRecords,
+          ),
         upsert: async (
           targetUserName: string,
           csvFile: string,

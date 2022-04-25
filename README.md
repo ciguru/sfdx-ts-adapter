@@ -169,6 +169,37 @@ ToBe Described
 
 ---
 
+### `> sfdx force:data:bulk:delete` (since v1.2.0)
+
+#### Call function
+
+```ts
+await SFDX.force.data.bulk.delete(
+  targetUserName,
+  csvFile,
+  sObjectType,
+  allowNoMoreFailedBatches,
+  allowNoMoreFailedRecords,
+);
+```
+
+#### Parameters
+
+<table>
+<tr><td><b>Parameter</b></td><td><b>Required</b></td><td><b>SFDX Command attribute</b></td><td><b>Comment</b></td></tr>
+<tr><td>targetUserName</td><td>true</td><td>--targetusername</td><td>Username or alias for the target org</td></tr>
+<tr><td>csvFile</td><td>true</td><td>--csvfile</td><td>Path to the CSV file containing the ids of the records to delete</td></tr>
+<tr><td>sObjectType</td><td>true</td><td>--sobjecttype</td><td>sObject type of the records you’re deleting</td></tr>
+<tr><td>allowNoMoreFailedBatches</td><td>false</td><td>N/A</td><td>Mark the transaction as successful if the number of failed batches does not exceed the specified value (default 0)</td></tr>
+<tr><td>allowNoMoreFailedRecords</td><td>false</td><td>N/A</td><td>Mark the transaction as successful if the number of failed records does not exceed the specified value (default 0)</td></tr>
+</table>
+
+#### Output Data
+
+ToBe Described
+
+---
+
 ### `> sfdx force:data:bulk:upsert` (since v1.0.0)
 
 #### Call function
