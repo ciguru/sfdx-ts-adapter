@@ -1,6 +1,6 @@
 {
   "name": "@ciguru/sfdx-ts-adapter",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Provide TS interfaces to the SFDX CLI as functions instead of executing commands on the command line",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
