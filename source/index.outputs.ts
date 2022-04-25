@@ -13,6 +13,7 @@ import { Output as ForceApexExecute } from './force/apex/execute';
 import { Output as ForceApexTest } from './force/apex/test/run';
 import { Output as ForceDataBulkUpsert } from './force/data/bulk/upsert';
 import { Output as ForceDataTreeImport } from './force/data/tree/import';
+import { Output as ForceDataSoql } from './force/data/soql';
 import { Output as ForceMdApiDeploy } from './force/mdapi/deploy';
 import { Output as ForceMdApiDeployReport } from './force/mdapi/deploy/report';
 import { Output as ForceMdApiRetrieve } from './force/mdapi/retrieve';
@@ -47,6 +48,9 @@ export default interface SfdxOutputs {
       };
       tree: {
         import: ForceDataTreeImport;
+      };
+      soql: {
+        queryCsv: ForceDataSoql;
       };
     };
     mdApi: {

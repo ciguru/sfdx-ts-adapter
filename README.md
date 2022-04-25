@@ -224,6 +224,29 @@ ToBe Described
 
 ---
 
+### `> sfdx force:data:soql:query` (since v1.2.0)
+
+#### Call function
+
+```ts
+await SFDX.force.data.soql.queryCsv(targetUserName, csvFile, query);
+```
+
+#### Parameters
+
+<table>
+<tr><td><b>Parameter</b></td><td><b>Required</b></td><td><b>SFDX Command attribute</b></td><td><b>Comment</b></td></tr>
+<tr><td>targetUserName</td><td>true</td><td>--targetusername</td><td>Username or alias for the target org.</td></tr>
+<tr><td>csvFile</td><td>true</td><td>N/A</td><td>CSV file name to save output data</td></tr>
+<tr><td>query</td><td>true</td><td>--query</td><td>SOQL query to execute</td></tr>
+</table>
+
+#### Output Data
+
+ToBe Described
+
+---
+
 ### `> sfdx force:mdapi:deploy` (since v1.0.0)
 
 #### Call function
